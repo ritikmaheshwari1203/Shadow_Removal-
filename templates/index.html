@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+        <title>Document</title>
+        <!-- <script type="module" crossorigin src="assets/index.74d163d3.js"></script> -->
+        <!-- <link rel="stylesheet" href="assets/index.d3eafc2f.css"> -->
+        <link rel="stylesheet" href="{{url_for('static',filename='index.e0e5c951.css')}}">
+
+</head>
+
+<body class="">
+
+
+        <div id="base-url" data-url="{{ url_for('static', filename='') }}"></div>
+
+        <nav class="flex justify-between z-30  h-[6.2rem] w-full items-center pl-6 pr-[3.5rem]  fixed ">
+                <h1 class="font-bold text-4xl "><a href="">BADAAM NET</a></h1>
+                <ul
+                        class="md:flex md:space-x-7  text-2xl absolute md:static z-[-1] top-[-150px] md:top-0 transition-all ease-in duration-500 ">
+                        <li class=" cursor-pointer    pl-3 pr-3 duration-500 font-bold">
+                                <a href="index.html">Home</a>
+                        </li>
+                        <li class=" cursor-pointer    pl-3 pr-3 duration-500 font-bold">
+                                <a href="allimage.html">Gallery</a>
+                        </li>
+                        <li class=" cursor-pointer    pl-3 pr-3 duration-500 font-bold">
+                                <a href="contactus.html">Contact</a>
+                        </li>
+                        <!-- <li
+                                class=" cursor-pointer hover:text-red-500 hover:bg-white rounded-xl pl-3 pr-3 duration-500 font-semibold">
+                                Service</li> -->
+                        <!-- <li
+                                class=" cursor-pointer hover:text-red-500 hover:bg-white rounded-xl p-2 pl-3 pr-3 duration-500 font-semibold border-[1px] ">
+                                <a href="contactus.html">Contact</a>
+                        </li> -->
+                </ul>
+                <ion-icon class="md:hidden text-red-500 text-3xl" name="menu" onclick="change(this)"></ion-icon>
+        </nav>
+
+        <header class="h-[100vh] w-full flex flex-col justify-end items-center box-border pb-4">
+                <!-- <img class="w-full h-full object-cover absolute z-[-1] " src="happy-birthday-1964457.jpg" alt=""> -->
+                <!-- <div class="video-container"> -->
+                <video autoplay muted loop id="video-bg" class="object-cover absolute z-[-1]">
+                        <source src="{{url_for('static',filename='Mothers day sales ad - Made with Clipchamp.bc801da6.mp4')}}"
+                                type="video/mp4">
+                        Your browser does not support the video tag.
+                </video>
+                <!-- Your content goes here -->
+                <!-- </div> -->
+                <div
+                        class="w-[90%] h-[30%] backdrop-blur-sm rounded-lg mb-2  shadow-2xl shadow-amber-100   flex justify-center items-center ">
+
+                        <!-- <h1 class="text-3xl text-center md:text-4xl pr-5 text-white font-extrabold pl-5 ">hello my name is Ritik</h1> -->
+                        <button class="bg-blue-500 w-[15rem] h-[4rem] rounded-md hover:bg-blue-700 text-white font-extrabold px-4  shadow-lg text-2xl  shadow-white transition duration-300"
+                                onclick="showuploadingOption()">TRY NOW</button>
+                </div>
+                <!-- <p class="text-justify text-white pl-5 pr-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Nobis
+                        mollitia
+                        doloribus, aperiam nam architecto tempore fugit obcaecati reprehenderit tenetur, nisi incidunt
+                        illum autem
+                        ab esse?</p> -->
+        </header>
+        <section
+                class="min-h-[100vh] flex-col flex justify-center items-center bg-gradient-to-r from-[#bfbfbf] to-white shadow-inner shadow-slate-900">
+
+                <div class=" h-[10rem] text-4xl font-bold flex justify-center items-center">
+                        <h1 class="underline ">OUR MODEL OUTPUTS </h1>
+                </div>
+                <div class="flex flex-wrap p-5 space-x-8 space-y-4 justify-center gallery">
+                        <span></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0020.dabb7021.png')}} " alt="" srcset=""></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0004.10fbdca7.png')}}" alt="" srcset=""></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0006.6bf00396.png')}}  " alt="" srcset=""></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0010.3eefe6b7.png')}} " alt="" srcset=""></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src=" {{url_for('static',filename='0012.4bd8ee8d.png')}} " alt="" srcset=""></span>
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0014.afd7fec7.png')}} " alt="" srcset=""></span>
+
+                        <span class="image w-[14rem] h-[16rem]"><img
+                                        class="md:hover:scale-125 md:ease-out duration-500 object-cover w-[14rem] h-[16rem]"
+                                        src="{{url_for('static',filename='0020.dabb7021.png')}} " alt="" srcset=""></span>
+                </div>
+        </section>
+        <hr>
+
+        <section class="min-h-[80vh] flex  flex-col background ">
+                <!-- <h1 class="text-5xl">Section 2</h1> -->
+                <div class="h-[15vh] w-full flex justify-center items-center">
+
+                        <h1 class="text-4xl font-bold  flex justify-center items-center"><span class="text-6xl ">
+                                        →</span> Meet To Our Team <span class="text-6xl"> ← </span></h1>
+                </div>
+                <div class="flex flex-wrap p-5 space-x-8 space-y-4 items-center h-[60vh] justify-center">
+                        <span></span>
+
+                        <div
+                                class="relative flex w-80 flex-col rounded-xl hover: bg-white bg-clip-border text-gray-700  shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-slate-700">
+                                <div
+                                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                                </div>
+                                <div class="p-6">
+                                        <h5
+                                                class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                                Rahul Teckchandani
+                                        </h5>
+                                        <p
+                                                class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis
+                                                ligula.
+                                        </p>
+                                </div>
+                                <div class="p-6 pt-0">
+                                        <button data-ripple-light="true" type="button"
+                                                class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                                Read More
+                                        </button>
+                                </div>
+                        </div>
+
+
+                        <div
+                                class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700  shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-slate-700">
+                                <div
+                                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                                        <img src="/assets/WhatsApp Image 2023-12-28 at 8.12.04 PM.3445abd1.jpeg"
+                                                class="w-full object-contain translate-y-[-2rem]" alt="" srcset="">
+                                </div>
+                                <div class="p-6">
+                                        <h5
+                                                class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                                Ritik Maheshwari
+                                        </h5>
+                                        <p
+                                                class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis
+                                                ligula.
+                                        </p>
+                                </div>
+                                <div class="p-6 pt-0">
+                                        <button data-ripple-light="true" type="button"
+                                                class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                                Read More
+                                        </button>
+                                </div>
+                        </div>
+
+
+                        <div
+                                class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-slate-700">
+                                <div
+                                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                                </div>
+                                <div class="p-6">
+                                        <h5
+                                                class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                                                Tailwind card
+                                        </h5>
+                                        <p
+                                                class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis
+                                                ligula.
+                                        </p>
+                                </div>
+                                <div class="p-6 pt-0">
+                                        <button data-ripple-light="true" type="button"
+                                                class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                                Read More
+                                        </button>
+                                </div>
+                        </div>
+
+                        
+                </div>
+        </section>
+
+        <div class="preview-box  fixed max-h-[500px] h-full max-w-[700px]  w-full top-[50%] translate-x-[-50%] translate-y-[-50%] left-[50%] border-2 rounded-3xl p-4 bg-white hidden duration-1000"
+                style="filter: drop-shadow(0px 60px 158px black);">
+                <div class="details flex items-center justify-between mb-1">
+                        <span class="title flex ">
+                                Image <p class="current img">3</p>
+                                of <p class="total-img">6</p>
+                        </span>
+                        <ion-icon class="text-3xl cursor-pointer text-blue-500 font-extrabold" name="close"
+                                id="close"></ion-icon>
+                </div>
+                <div class="img-box relative">
+                        <div class="absolute top-[41%] prev">
+                                <ion-icon class=" text-7xl cursor-pointer text-white font-extrabold"
+                                        name="arrow-dropleft"></ion-icon>
+                        </div>
+                        <div class="absolute right-0 top-[41%] next">
+                                <ion-icon class="text-7xl cursor-pointer text-white font-extrabold"
+                                        name="arrow-dropright"></ion-icon>
+                        </div>
+                        <img class="w-full h-[27rem] object-cover rounded-[2rem]" src="" alt="" srcset="">
+                </div>
+        </div>
+
+
+        <section class="fixed hidden z-20 flex justify-center items-center  top-0 w-[100vw] h-[100vh]"
+                id="uploadOption">
+
+                <div class="w-[55%] h-[60%]  backdrop-blur-lg rounded-2xl">
+                        <!-- <section class="w-full  h-[25rem]"> -->
+                        <div class="w-full h-full flex justify-center items-center">
+
+                                <form class="w-[80%] md:w-[60%] flex flex-col  items-center " id="imageForm">
+                                        <!-- onsubmit="return isFileUploaded()" -->
+
+                                        <div class="flex  items-center justify-center w-full">
+                                                <label for="userfile"
+                                                        class="flex  rounded-3xl flex-col items-center bg-gray-300 justify-center w-full h-64 border-2 border-gray-300 border-dashed  cursor-pointer  ">
+                                                        <div
+                                                                class="flex flex-col items-center justify-center pt-5 pb-6">
+                                                                <svg class="w-8 h-8 mb-4 " aria-hidden="true"
+                                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                        viewBox="0 0 20 16">
+                                                                        <path stroke="currentColor"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round" stroke-width="2"
+                                                                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                                                </svg>
+                                                                <p class="mb-2 p-1 text-lg text-center "><span
+                                                                                class="font-semibold">Upload your Shadow
+                                                                                Image here</span></p>
+                                                                <p class="text-xs text-center ">PNG, JPEG, JPG</p>
+                                                                <p class="text-xs text-center font-bold "
+                                                                        id="selected_file_name"></p>
+                                                        </div>
+                                                </label>
+                                                <input id="userfile" type="file" name="userfile" class="hidden" />
+                                        </div>
+                                        <!-- <div class="">
+                                                <input type="submit" value="Upload"
+                                                        class="mt-2 w-fit text-center p-3 cursor-pointer  pl-8 pr-8 rounded-xl text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
+                                        </div> -->
+                                </form>
+                        </div>
+
+                        <!-- </section> -->
+                </div>
+
+        </section>
+
+
+        <section class="fixed hidden  top-0 flex justify-center items-center transform transition  z-50 duration-700 ease-in backdrop-blur-lg w-[100vw] h-[100vh] "
+                id="uploadImage">
+                <div class="w-[85%] overflow-hidden h-[88%] bg-gray-300 flex flex-col  rounded-2xl">
+
+
+                        <div class=" p-2  w-full ">
+                                <ul class="flex justify-end p-1">
+                                        <li class="p-1 duration-700 hover:bg-slate-500 rounded-xl"><button
+                                                        onclick="CloseImgpanel()" class="text-5xl"><ion-icon
+                                                                name="close"></ion-icon></button></li>
+
+                                </ul>
+                        </div>
+                        <div class="flex justify-center items-center  flex-col" id="client_preview">
+
+                                <div class="w-[60rem] ">
+                                        <div
+                                                class="w-full min-h-[20rem] max-h-[60vh] flex justify-center items-center  ">
+                                                <div class="max-h-[60vh]">
+                                                        <img id="ImgPreview"
+                                                                src="{{url_for('static',filename='0000.f2e857ca.png')}}"
+                                                                alt="image"
+                                                                class=" max-h-[60vh] rounded-lg  w-full object-cover  ">
+                                                </div>
+
+
+                                        </div>
+                                </div>
+
+                                <div class="">
+                                        <input type="submit" id="sendimage" value="Send to Model"
+                                                class="mt-2 w-fit text-center p-3 cursor-pointer  pl-8 pr-8 rounded-xl text-white text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
+                                </div>
+                        </div>
+
+                        <div class="flex hidden justify-center items-center w-full h-full  " id="server_side_preview">
+
+
+                                <div class="rounded-lg w-[50%] flex justify-center items-center  h-full">
+                                        <div class="w-[95%]  rounded-xl overflow-hidden h-[70%]  ">
+                                                <div class=" ">
+                                                        <img id="out_ImgPreview" src="" alt="image"
+                                                                class=" rounded-lg  w-full h-full object-contain  ">
+                                                </div>
+
+
+                                        </div>
+                                </div>
+                                <div class="rounded-lg flex justify-center items-center  w-[50%] h-full">
+                                        <div class="w-[95%]  rounded-xl overflow-hidden h-[70%]  " id="server_ImgPreview_parent">
+                                                <div class="">
+                                                        <img id="server_ImgPreview" src="" alt="image"
+                                                                class=" rounded-lg  w-full h-full object-contain  ">
+                                                </div>
+
+
+                                        </div>
+
+                                        <div class="animate-pulse hidden flex flex-col items-center gap-4 w-[95%]" id="waiting_loader">
+                                                <div>
+                                                        <div class="w-48 h-6 bg-slate-400 rounded-md"></div>
+                                                        <div class="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md">
+                                                        </div>
+                                                </div>
+                                                <div class="h-7 bg-slate-400 w-full rounded-md"></div>
+                                                <div class="h-7 bg-slate-400 w-full rounded-md"></div>
+                                                <div class="h-7 bg-slate-400 w-full rounded-md"></div>
+                                                <div class="h-7 bg-slate-400 w-1/2 rounded-md"></div>
+                                        </div>
+                                </div>
+
+                        </div>
+                </div>
+        </section>
+
+        <script src="{{url_for('static',filename='app.js')}}"></script>
+
+        <script>
+
+                function CloseImgpanel() {
+                        let uploadImage = document.getElementById("uploadImage")
+                        uploadImage.classList.toggle("hidden")
+                        let server_side_preview = document.getElementById("server_side_preview")
+                        server_side_preview.classList.toggle("hidden")
+
+                        let client_preview = document.getElementById("client_preview")
+                        client_preview.classList.toggle("hidden")
+
+
+                }
+                function showuploadingOption(params) {
+                        let uploadOption = document.getElementById("uploadOption")
+                        uploadOption.classList.toggle("hidden")
+                }
+
+
+                // function renderImgPanel() {
+                const image_input = document.getElementById("userfile");
+
+                // var uploadImage2="";
+                console.log("in upload");
+                // var uploadImage2="";
+                image_input.addEventListener("change", function () {
+                        // let IndexPage = document.getElementById('IndexPage');
+                        // IndexPage.classList.add('hidden');
+                        console.log("hello world");
+                        let uploadOption = document.getElementById("uploadOption")
+                        uploadOption.classList.toggle("hidden")
+                        let uploadImage = document.getElementById("uploadImage");
+                        uploadImage.classList.toggle('hidden');
+                        const reader = new FileReader();
+                        reader.addEventListener("load", function () {
+
+
+
+
+                                uploadImage = reader.result;
+                                console.log(image_input.files[0].name);
+
+
+
+                                name = "0000.f2e857ca.png"
+                                // uploadImage = "{{url_for('static',filename='')}}"
+                                uploadImage = "{{ url_for('static', filename='') }}" + image_input.files[0].name;
+                                // uploadImage = url_for('static',filename='')
+                                console.log(uploadImage);
+                                let ImgPreview = document.getElementById("ImgPreview");
+                                ImgPreview.src = uploadImage;
+
+                        });
+                        reader.readAsDataURL(this.files[0]);
+
+                })
+                // }
+        </script>
+
+
+        <script>
+
+                document.addEventListener('DOMContentLoaded', function () {
+                        const sendimage = document.getElementById('sendimage');
+                        sendimage.addEventListener('click', handleSubmit);
+                });
+
+
+                function handleSubmit(){
+                        event.preventDefault();
+                        const formData = new FormData();
+                        const imageInput = document.getElementById('userfile');
+                        const selectedImage = imageInput.files[0];
+
+                        if (!selectedImage) {
+                                alert('Please select an image.');
+                                return;
+                        }
+
+                        formData.append('image', selectedImage);
+
+                        let server_side_preview = document.getElementById("server_side_preview")
+                        let waiting_loader = document.getElementById("waiting_loader")
+                        let server_ImgPreview_parent = document.getElementById("server_ImgPreview_parent")
+
+                        const image_input = document.getElementById("userfile");
+                        const out_ImgPreview = document.getElementById("out_ImgPreview")
+                        let inuput_url = "{{ url_for('static', filename='') }}" + image_input.files[0].name;
+                        // out_ImgPreview.src = responseData['image_url']
+                        out_ImgPreview.src = inuput_url
+                        let client_preview = document.getElementById("client_preview")
+                        client_preview.classList.toggle("hidden")
+                        server_ImgPreview_parent.classList.toggle("hidden")
+                        server_side_preview.classList.toggle("hidden")
+                        waiting_loader.classList.toggle("hidden")
+
+
+
+                        fetch('/upload',{
+                                        method: 'POST',
+                                        body: formData,
+                                }).then(function(response){
+                                        return response.json()
+                                }).then(function(data){
+
+
+                                        const server_ImgPreview = document.getElementById("server_ImgPreview")
+
+
+                                        // inuput_url = responseData['image_url'] ;
+                                        waiting_loader.classList.toggle("hidden")
+                                        server_ImgPreview_parent.classList.toggle("hidden")
+
+                                        server_ImgPreview.src = data['image_url']
+                                        console.log(server_ImgPreview);
+
+                                        // server_ImgPreview.classList.toggle("hidden")
+
+
+
+                                })
+
+
+
+
+                }
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>

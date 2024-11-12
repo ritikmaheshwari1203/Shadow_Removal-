@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploader</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <form id="imageForm">
+        <input type="file" id="imageInput">
+        <button type="submit">Upload</button>
+    </form>
+
+
+
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('imageForm');
+    form.addEventListener('submit', handleSubmit);
+});
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData();
+    const imageInput = document.getElementById('imageInput');
+    const selectedImage = imageInput.files[0];
+
+    if (!selectedImage) {
+        alert('Please select an image.');
+        return;
+    }
+
+    formData.append('image', selectedImage);
+
+    try {
+        const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData,
+        });
+        const responseData = await response.json();
+        console.log(responseData);
+        // if (response.ok) {
+        //     alert('Image uploaded successfully!');
+        // } else {
+        //     alert('Error uploading image. Please try again.');
+        // }
+    } catch (error) {
+        console.error('Error uploading image:', error);
+        alert('Error uploading image. Please try again.');
+    }
+}
+
+
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
