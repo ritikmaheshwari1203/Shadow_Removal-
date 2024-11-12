@@ -22,3 +22,6 @@ running eval
 
 python main.py --mode test --data_dir path/to/input/dir  --batch_size 1 --test_model ./pretrained/model.pkl --gpu_id 0
 
+# Pretained Weights
+You can download pretained weights from  [Weights](https://drive.google.com/file/d/11RByh5fJAA7mFFB6EEklGfN5-dzq_I0_/view?usp=sharing)- Hint: Paste the weights in pretrained directry.
+
